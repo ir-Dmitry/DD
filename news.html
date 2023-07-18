@@ -1,0 +1,101 @@
+<?php
+include("scripts.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архив новостей</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/news_style.css">
+</head>
+
+<body class="body">
+    <div id="div_on_home">
+        <div class="div_on_home">
+            <a id="on_home" href="/index.html">На главную</a>
+        </div>
+    </div>
+    
+    <section id="search"class="sort">
+        <form class="row column ahahaha" action="" method="get">
+            <h1 class="filter">Фильтры</h1>
+            <div class="row column">
+                <div class="row container-top">
+                    <input class="search" type="text" placeholder="ФИО" name="NSL" value="<?php echo $nsl_print ?>">
+                    
+                    <input class="search" type="date" title="Дата рождения" name="BirthDate" value="<?php echo $birth_print ?>">
+                </div>
+
+                <div id="search_b"class="row container-top" style="height: 30px;"> 
+                    <button class="search_b" id="set_b" type="submit" name="action" value="set">Применить</button>  
+                    <button class="search_b" id="clear_b" type="submit" name="action" value="clear">Очистить</button>          
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- <hr>
+    <section class="row p">
+        
+            <div class="col lol">
+                <span>Изображение</span>
+
+            </div>
+            
+            <div class="col lol">
+                <span>Заголовок</span>
+            </div>
+
+            <div class="col lol" style="flex-grow: 0.5;">
+                <span>Дата</span>
+            </div>
+
+            <div class="col lol" style="flex-grow: 2;">
+                <span>Текст</span> 
+            </div>
+            
+            <div class="col lol">
+                <span>ДР</span>
+            </div>
+
+    </section> -->
+    <div class="cards">
+        <?php 
+        foreach($bd_array_2 as $item)
+        {
+            ?>
+            <!-- карточки с данными из БД -->
+
+            <div class="card description">
+                <img src="img/<?php echo $item['photo'];?>" alt="Фото" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title"><?php echo htmlspecialchars ($item['Title']);?></h2>
+                    <p class="background"><?php echo htmlspecialchars ($item['Date']);?></p>
+                    <p><?php echo htmlspecialchars ($item['Text']);?></p>
+                </div>
+            </div>
+
+            <!-- карточка с Кравец -->
+
+            <!-- <div class="card description">
+                <img src="/image/kravec_alla_grigorevna_0.jpg" alt="Фото" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Название</h2>
+                    <p class="background">ДД.ММ.ГГГГ</p>
+                    <p>Текст...</p>
+                </div>
+            </div>   -->
+
+        <?php 
+        }
+    ?>    
+    </div>
+</body>

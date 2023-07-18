@@ -1,0 +1,608 @@
+/* устройства с указателями мыши */
+@media (hover: hover) 
+{
+    *{
+        font-family: 'Roboto', Times, serif;
+        box-sizing: border-box;
+        max-width: 100%
+    }
+
+    .body{
+        margin: 3% 10% 0;
+        min-width: 620px;
+    }
+
+    @media  screen and (max-width: 800px) {
+        .body{
+            margin: 3% 5% 0;
+            min-width: 620px;
+        }
+    }
+
+    *:not(body){
+        margin: 0;
+        padding: 0;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .col{
+        max-width: 100%;
+        flex: 1 0 0%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    .filter{
+        padding-left: 5px;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #1976D2;
+        margin: auto 0px;
+    }
+    .content{
+        text-align: center;
+        padding: 12px,12px,12px,12px;
+    }
+    .description{
+        margin: 0 auto;
+    }
+    .description h2{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        font-size: 28px;
+        text-align: center;
+        color: #1976D2;
+        text-transform: none;
+    }
+    .description p{
+        margin-bottom:25px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight:  500;
+        line-height: 23px;
+        font-size: 20px;
+        color: black;
+    }
+
+    .cards{
+        margin-top: 50px;
+        /* padding-top: 50px;
+        padding-bottom: 50px; */
+    }
+    .cards > .card {
+        display: flex; /* Расположение элементов внутри карточки в одной строке */
+        background-color: #ffffff; /* Цвет фона карточки */
+        border-radius: 15px; /* Скругление углов карточки */
+        padding: 10px; /* Отступы внутри карточки */
+        flex-direction: row;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        --border: 1px solid #757575;
+    }
+    .card .background{
+        color: #929ca3;
+    }
+    .card  .card-image {
+        width: 150px; /* Ширина фотографии */
+        height: auto; /* Высота фотографии */
+        object-fit: cover; /* Масштабирование фотографии, чтобы она полностью заполняла свое пространство */
+        display: inline-block;
+        border-radius: 20px; /* Скругление углов фотографии */
+        margin-bottom: auto; /* Отступ справа от фотографии */
+        background-color: #ffffff;
+    }
+    
+    .card  .card-content {
+        flex-grow: 1; /* Растягивание содержимого, чтобы занять оставшееся пространство */
+        padding: 20px;
+        background-color: #ffffff;
+    }
+    
+    .card .card-title {
+        margin-top: 0; /* Убираем отступ сверху у заголовка */
+        display: inline-block;
+        text-align: left;
+        background-color: #ffffff;
+    }
+    .card p{
+        background-color: #ffffff;
+    }
+    .photodb{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        background-size:contain;
+    }
+    .button {
+        display: inline-block; /* Отображение кнопки как строчно-блочного элемента */
+        padding: 10px 20px; /* Отступы внутри кнопки */
+        font-size: 16px; /* Размер шрифта кнопки */
+        font-family: Roboto;
+        font-style: normal;
+        text-align: center; /* Выравнивание текста по центру кнопки */
+        text-decoration: none; /* Убираем стандартное оформление ссылки */
+        background-color: #1976D2; /* Цвет фона кнопки */
+        color: #ffffff; /* Цвет текста кнопки */
+        border: none; /* Убираем границу кнопки */
+        border-radius: 19px; /* Скругление углов кнопки */
+        cursor: pointer; /* Изменение вида курсора при наведении на кнопку */
+    }
+    
+    .button:hover {
+        background-color: #000000; /* Цвет фона кнопки при наведении */
+    }
+        
+    .p{
+        margin-top: 20px;
+        margin-bottom: 20px;    
+    }
+
+    .otstup2 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #cdcdcd;
+        z-index: 1;
+    }
+
+    .otstup1 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #b2c335;
+        z-index: 1;
+    }
+
+    #content {
+        margin-top: 35px;
+        margin-left: calc(100% - 90%);
+        margin-right: calc(100% - 90%);
+        box-sizing: border-box;
+    }
+    #content::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    a:any-link{
+        outline: none;
+        text-decoration: none;
+        --color: black;
+    }
+    a:any-link:hover {
+        text-decoration: underline;
+        --color: black;
+    }  
+    a:hover.outerL.outerL {
+        text-decoration: none;
+    }
+    #on_home{
+        text-decoration: underline;
+        
+        color: #1976D2;
+        width: 90px;
+        margin: auto 0px;
+    }
+    #on_home:visited{
+        color: #1976D2;
+    }
+    .div_on_home{
+        display: inline-block;
+        height: 20px;
+        margin: 15px 0;
+    }   
+    #div_on_home {
+        float: right;
+        height: 50px;
+        --margin-right: 10%;
+    }
+    #div_on_home::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .sort{
+        margin: 5px;
+    }
+    #search{
+        max-width: 720px;
+        margin: 5px;
+        
+        margin-right: 20%;
+        margin-left: 10px;
+        border-radius: 3px;
+        text-align: center;
+    }
+    .search{
+        width: 180px;
+        height: 40px;
+        margin: 5px;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400px;
+        text-align: center;
+        color: #757575;
+        border: 1px solid #1976D2
+    }
+    .ahahaha{
+        justify-content: space-between;
+        vertical-align: middle;
+    }
+    .lol{
+        text-align: center;
+    }
+    #search_bio{
+        max-width: 252px;
+    }
+    .search_b{
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 0px;
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: normal;
+        text-align: center;
+        border-radius: 15px;
+        color: #1976D2;
+        background-color: #ffffff;
+        
+        border: 1px solid #1976D2;
+    }
+    #search_b{
+        padding-left: 5px;
+        width: 190px;
+        justify-content: space-between;
+        margin: auto 0;
+        text-align: center;
+    }
+    .search_b:hover
+    {
+        background-color: rgb(0, 0, 0);
+    }
+    .search_b::shadow{
+        background-color: rgb(0, 0, 0);
+    }
+    #set_b{
+    }
+
+    #clear_b{
+    }
+    .button_bak{
+        border-width: 1.5px;
+    }
+    .button_bak:hover{
+        background-color: rgb(205, 205, 205);
+    }
+    .button_bak::shadow{
+        background-color: rgb(205, 205, 205);
+    }
+
+    *:not(.card), *:not(.card-content){
+        background-color: #fafafa;
+    }
+    html{
+        height: 100%;
+        background-color: #fafafa;
+    }
+}
+
+
+/* сенсонрые устройства */
+@media (hover: none) 
+{
+    *{
+        font-family: 'Roboto', Times, serif;
+        box-sizing: border-box;
+        max-width: 100%
+    }
+
+    .body{
+        margin: 0;
+        padding: 3% 10%;
+    }
+
+    @media  screen and (max-width: 800px) {
+        .body{
+            height: auto;
+            padding: 3% 5%;
+            margin: 0;
+        }
+    }
+
+    *:not(body){
+        margin: 0;
+        padding: 0;
+    }
+    .column {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        
+    }
+    .row {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        
+    }
+    .container-top{
+        margin-top: 20px;
+    }
+    .col{
+        max-width: 100%;
+        flex: 1 0 0%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    .filter{
+        width: 100%;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #1976D2;
+        margin: auto 0px;
+    }
+    .content{
+        text-align: center;
+        padding: 12px,12px,12px,12px;
+    }
+    .description{
+        margin: 0 auto;
+    }
+    .description h2{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        font-size: 28px;
+        text-align: center;
+        color: #1976D2;
+        text-transform: none;
+    }
+    .description p{
+        margin-bottom:25px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight:  500;
+        line-height: 23px;
+        font-size: 20px;
+        color: black;
+    }
+
+    .cards{
+        margin-top: 50px;
+        /* padding-top: 50px;
+        padding-bottom: 50px; */
+    }
+    .cards > .card {
+        display: flex; /* Расположение элементов внутри карточки в одной строке */
+        background-color: #ffffff; /* Цвет фона карточки */
+        border-radius: 15px; /* Скругление углов карточки */
+        padding: 10px; /* Отступы внутри карточки */
+        flex-direction: row;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        --border: 1px solid #757575;
+    }
+    .card .background{
+        color: #929ca3;
+    }
+    .card  .card-image {
+        width: 150px; /* Ширина фотографии */
+        height: auto; /* Высота фотографии */
+        object-fit: cover; /* Масштабирование фотографии, чтобы она полностью заполняла свое пространство */
+        display: inline-block;
+        border-radius: 20px; /* Скругление углов фотографии */
+        margin-bottom: auto; /* Отступ справа от фотографии */
+        background-color: #ffffff;
+    }
+    
+    .card  .card-content {
+        flex-grow: 1; /* Растягивание содержимого, чтобы занять оставшееся пространство */
+        padding: 20px;
+        background-color: #ffffff;
+    }
+    
+    .card .card-title {
+        margin-top: 0; /* Убираем отступ сверху у заголовка */
+        display: inline-block;
+        text-align: left;
+        background-color: #ffffff;
+    }
+    .card p{
+        background-color: #ffffff;
+    }
+    .photodb{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        background-size:contain;
+    }
+    .button {
+        display: inline-block; /* Отображение кнопки как строчно-блочного элемента */
+        padding: 10px 20px; /* Отступы внутри кнопки */
+        font-size: 16px; /* Размер шрифта кнопки */
+        font-family: Roboto;
+        font-style: normal;
+        text-align: center; /* Выравнивание текста по центру кнопки */
+        text-decoration: none; /* Убираем стандартное оформление ссылки */
+        background-color: #1976D2; /* Цвет фона кнопки */
+        color: #ffffff; /* Цвет текста кнопки */
+        border: none; /* Убираем границу кнопки */
+        border-radius: 19px; /* Скругление углов кнопки */
+        cursor: pointer; /* Изменение вида курсора при наведении на кнопку */
+    }
+    
+    .button:hover {
+        background-color: #000000; /* Цвет фона кнопки при наведении */
+    }
+        
+    .p{
+        margin-top: 20px;
+        margin-bottom: 20px;    
+    }
+
+    .otstup2 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #cdcdcd;
+        z-index: 1;
+    }
+
+    .otstup1 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #b2c335;
+        z-index: 1;
+    }
+
+    #content {
+        margin-top: 35px;
+        margin-left: calc(100% - 90%);
+        margin-right: calc(100% - 90%);
+        box-sizing: border-box;
+    }
+    #content::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    a:any-link{
+        outline: none;
+        text-decoration: none;
+        --color: black;
+    }
+    a:any-link:hover {
+        text-decoration: underline;
+        --color: black;
+    }  
+    a:hover.outerL.outerL {
+        text-decoration: none;
+    }
+    #on_home{
+        text-decoration: none;
+        border-radius: 15px;
+        padding: 5px 10px;
+        color: #ffffff;
+        margin: auto 0px;
+        background-color: #1976D2;        
+    }
+
+    #on_home:visited{
+        color: #ffffff;
+    }
+    .div_on_home{
+        display: inline-block;
+    }   
+    #div_on_home {
+        float: right;
+        margin: 20px 10px 0 0;
+    }
+    #div_on_home::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .sort{
+        margin: 5px;
+    }
+    #search{
+        margin: 0px 10px 0;
+        border-radius: 3px;
+        text-align: center;
+    }
+    .search{
+        width: 180px;
+        height: 40px;
+        margin: 5px;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400px;
+        text-align: center;
+        color: #757575;
+        border: 1px solid #1976D2
+    }
+    .ahahaha{
+        justify-content: space-between;
+        padding-top: 40px;
+        vertical-align: middle;
+    }
+    .lol{
+        text-align: center;
+    }
+    #search_bio{
+        max-width: 252px;
+    }
+    .search_b{
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 0px 5px;
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: normal;
+        text-align: center;
+        border-radius: 15px;
+        color: #1976D2;
+        background-color: #ffffff;
+        
+        border: 1px solid #1976D2;
+    }
+    #search_b{
+        justify-content: center;
+        text-align: center;
+    }
+    .search_b:hover
+    {
+        background-color: rgb(0, 0, 0);
+    }
+    .search_b::shadow{
+        background-color: rgb(0, 0, 0);
+    }
+    #set_b{
+    }
+
+    #clear_b{
+    }
+    .button_bak{
+        border-width: 1.5px;
+    }
+    .button_bak:hover{
+        background-color: rgb(205, 205, 205);
+    }
+    .button_bak::shadow{
+        background-color: rgb(205, 205, 205);
+    }
+
+    *:not(.card), *:not(.card-content){
+        background-color: #fafafa;
+    }
+    html{
+        height: 100%;
+        background-color: #fafafa;
+    }
+}
